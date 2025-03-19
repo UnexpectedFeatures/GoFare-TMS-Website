@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-
 async function initializeApp() {
   try {
     await createDatabaseIfNotExists();
@@ -23,7 +22,6 @@ async function initializeApp() {
     const server = app.listen(process.env.PORT, () => {
       console.log(`App is listening on port: ${process.env.PORT}`);
     });
-
   } catch (error) {
     console.error("Error initializing the application:", error);
     process.exit(1);
